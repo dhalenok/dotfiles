@@ -1,9 +1,9 @@
-require('lualine').setup({
-    tabline = {
-        lualine_a = {
-            {
-                "buffers",
-            },
-        },
-    }
+require("lualine").setup({
+	tabline = {
+		lualine_a = {
+			{
+				"buffers",
+			},
+		},
+	},
 })
