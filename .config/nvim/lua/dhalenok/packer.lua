@@ -65,4 +65,5 @@ return require("packer").startup(function(use)
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
 	use("tpope/vim-abolish")
+	use({ "kkoomen/vim-doge", run = ":call doge#install()" })
 end)
