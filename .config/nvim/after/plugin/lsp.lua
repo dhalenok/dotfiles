@@ -37,7 +37,7 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "pyright", "ruff_lsp", "tsserver", "eslint", "emmet_ls" },
+	ensure_installed = { "pyright", "ruff_lsp", "tsserver", "eslint", "emmet_ls", "gopls" },
 	handlers = {
 		lsp_zero.default_setup,
 		pyright = function()
@@ -62,6 +62,7 @@ require("mason-lspconfig").setup({
 					"pug",
 					"typescriptreact",
 					"vue",
+					"htmldjango",
 				},
 			})
 		end,
