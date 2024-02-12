@@ -18,7 +18,7 @@ return require("packer").startup(function(use)
 	})
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
-	use("airblade/vim-gitgutter")
+	use("lewis6991/gitsigns.nvim")
 	use({
 		"folke/which-key.nvim",
 		config = function()
@@ -66,4 +66,11 @@ return require("packer").startup(function(use)
 	})
 	use("tpope/vim-abolish")
 	use({ "kkoomen/vim-doge", run = ":call doge#install()" })
+	use({
+		"kevinhwang91/nvim-ufo",
+		requires = {
+			"kevinhwang91/promise-async",
+		},
+	})
+	use("luukvbaal/statuscol.nvim")
 end)
