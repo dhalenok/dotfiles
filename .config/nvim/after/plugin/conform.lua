@@ -13,7 +13,7 @@ require("conform").setup({
 		yaml = { "prettier" },
 		markdown = { "prettier" },
 		graphql = { "prettier" },
-		["*"] = { "trim_whitespace", "trim_newlines" },
+		["*"] = { "trim_whitespace" },
 	},
 	format_on_save = {
 		lsp_fallback = true,

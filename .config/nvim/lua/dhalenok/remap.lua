@@ -6,6 +6,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "<leader>d", [["_d]])
 
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank highlighted text to clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank highlighted lines to clipboard" })

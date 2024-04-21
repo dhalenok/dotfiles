@@ -37,32 +37,13 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "pyright", "ruff_lsp", "tsserver", "eslint", "emmet_ls", "gopls" },
+	ensure_installed = { "pyright", "ruff_lsp", "tsserver", "eslint", "gopls" },
 	handlers = {
 		lsp_zero.default_setup,
 		pyright = function()
 			require("lspconfig").pyright.setup({
 				handlers = {
 					["textDocument/publishDiagnostics"] = function() end,
-				},
-			})
-		end,
-		emmet_ls = function()
-			require("lspconfig").emmet_ls.setup({
-				filetypes = {
-					"css",
-					"eruby",
-					"html",
-					"javascript",
-					"javascriptreact",
-					"less",
-					"sass",
-					"scss",
-					"svelte",
-					"pug",
-					"typescriptreact",
-					"vue",
-					"htmldjango",
 				},
 			})
 		end,
