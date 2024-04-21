@@ -35,6 +35,8 @@ lsp_zero.on_attach(function(client, bufnr)
 	end, opts)
 end)
 
+local navic = require("nvim-navic")
+
 require("mason").setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = { "pyright", "ruff_lsp", "tsserver", "eslint", "gopls" },
@@ -45,6 +47,16 @@ require("mason-lspconfig").setup({
 				handlers = {
 					["textDocument/publishDiagnostics"] = function() end,
 				},
+				on_attach = function(client, bufnr)
+					navic.attach(client, bufnr)
+				end,
+			})
+		end,
+		tsserver = function()
+			require("lspconfig").tsserver.setup({
+				on_attach = function(client, bufnr)
+					navic.attach(client, bufnr)
+				end,
 			})
 		end,
 	},

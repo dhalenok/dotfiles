@@ -73,4 +73,9 @@ return require("packer").startup(function(use)
 		},
 	})
 	use("luukvbaal/statuscol.nvim")
+	use({
+		"SmiteshP/nvim-navic",
+		requires = "neovim/nvim-lspconfig",
+	})
+	use("f-person/git-blame.nvim")
 end)

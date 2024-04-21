@@ -1,3 +1,6 @@
+vim.g.gitblame_display_virtual_text = 0
+local git_blame = require("gitblame")
+
 require("lualine").setup({
 	tabline = {
 		lualine_a = {
@@ -6,6 +9,19 @@ require("lualine").setup({
 				max_length = vim.o.columns,
 			},
 		},
+	},
+	winbar = {
+		lualine_a = { "branch" },
+		lualine_b = { { "filename", path = 1 } },
+		lualine_c = { { "navic", color_correction = "static" } },
+	},
+	sections = {
+		lualine_a = { "mode" },
+		lualine_b = { "branch", "diff", "diagnostics" },
+		lualine_c = { "filename", { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available } },
+		lualine_x = { "encoding", "fileformat", "filetype" },
+		lualine_y = { "progress" },
+		lualine_z = { "location" },
 	},
 })
 

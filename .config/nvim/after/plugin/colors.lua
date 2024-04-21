@@ -6,6 +6,7 @@ require("catppuccin").setup({
 		treesitter = true,
 		which_key = true,
 		ufo = true,
+		navic = { enabled = true },
 	},
 })
 
