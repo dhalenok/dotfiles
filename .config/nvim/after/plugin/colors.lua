@@ -7,7 +7,17 @@ require("catppuccin").setup({
 		which_key = true,
 		ufo = true,
 		navic = { enabled = true },
+		harpoon = true,
 	},
+
+	custom_highlights = function(colors)
+		return {
+			HarpoonActive = { fg = colors.surface0, bg = colors.blue },
+			HarpoonNumberActive = { fg = colors.surface0, bg = colors.blue },
+			HarpoonInactive = { fg = colors.subtext0 },
+			HarpoonNumberInactive = { fg = colors.subtext0 },
+		}
+	end,
 })
 
 vim.cmd.colorscheme("catppuccin")
