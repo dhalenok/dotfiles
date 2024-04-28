@@ -13,3 +13,8 @@ vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank highlighted lines to cl
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move cursor and screen down 1/2 page " })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move cursor and screen up 1/2 page " })
+
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
