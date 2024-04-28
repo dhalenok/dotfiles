@@ -39,7 +39,7 @@ local navic = require("nvim-navic")
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "pyright", "ruff_lsp", "tsserver", "eslint", "gopls" },
+	ensure_installed = { "pyright", "ruff_lsp", "tsserver", "eslint", "gopls", "lua_ls" },
 	handlers = {
 		lsp_zero.default_setup,
 		pyright = function()
@@ -54,6 +54,21 @@ require("mason-lspconfig").setup({
 		end,
 		tsserver = function()
 			require("lspconfig").tsserver.setup({
+				on_attach = function(client, bufnr)
+					navic.attach(client, bufnr)
+				end,
+			})
+		end,
+		lua_ls = function()
+			require("lspconfig").lua_ls.setup({
+				settings = {
+					Lua = {
+						runtime = { version = "Lua 5.1" },
+						diagnostics = {
+							globals = { "vim", "it", "describe", "before_each", "after_each" },
+						},
+					},
+				},
 				on_attach = function(client, bufnr)
 					navic.attach(client, bufnr)
 				end,
