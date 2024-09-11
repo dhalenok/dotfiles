@@ -1,9 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	init = function()
-		vim.g.gitblame_display_virtual_text = 0
-	end,
 	config = function()
 		local harpoon = require("harpoon")
 		function Harpoon_files()
