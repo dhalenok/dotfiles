@@ -1,1 +1,1 @@
-require("dhalenok")
+require("config.lazy")
