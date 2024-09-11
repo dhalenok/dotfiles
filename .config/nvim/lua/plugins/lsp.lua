@@ -92,7 +92,9 @@ return {
 
 						require("lspconfig")[server_name].setup({
 							on_attach = function(client, bufnr)
-								navic.attach(client, bufnr)
+								if client.server_capabilities.documentSymbolProvider then
+									navic.attach(client, bufnr)
+								end
 							end,
 						})
 					end,
