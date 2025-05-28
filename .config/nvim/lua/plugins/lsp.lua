@@ -83,7 +83,7 @@ return {
 			})
 
 			require("mason-lspconfig").setup({
-				ensure_installed = { "pyright", "ruff_lsp", "ts_ls", "eslint", "lua_ls", "somesass_ls", "angularls" },
+				ensure_installed = { "pyright", "ruff_lsp", "ts_ls", "eslint", "lua_ls", "somesass_ls" },
 				handlers = {
 					-- this first function is the "default handler"
 					-- it applies to every language server without a "custom handler"
