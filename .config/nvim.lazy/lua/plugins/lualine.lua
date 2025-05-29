@@ -1,7 +1,7 @@
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  config = function()
+  opts = function()
     local harpoon = require("harpoon")
     function Harpoon_files()
       local contents = {}
