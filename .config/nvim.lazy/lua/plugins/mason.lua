@@ -5,7 +5,7 @@ return {
       "basedpyright",
       "ruff",
       "typescript-language-server",
-      "eslint",
+      "eslint-lsp",
       "stylua",
       "shfmt",
     },
