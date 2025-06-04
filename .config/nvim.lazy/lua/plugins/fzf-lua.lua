@@ -3,26 +3,10 @@ return {
   dependencies = { "echasnovski/mini.icons" },
   opts = { "telescope" },
   keys = {
-    {
-      "<leader>ff",
-      function()
-        require("fzf-lua").files()
-      end,
-      desc = "Search for a file",
-    },
-    {
-      "<leader>fg",
-      function()
-        require("fzf-lua").live_grep()
-      end,
-      desc = "Search for a string",
-    },
-    {
-      "<leader>b",
-      function()
-        require("fzf-lua").buffers()
-      end,
-      desc = "Search open buffers",
-    },
+    { "<leader>ff", LazyVim.pick("files", { root = false }), desc = "Find Files (Root Dir)" },
+    { "<leader>fg", LazyVim.pick("live_grep", { root = false }), desc = "Grep (Root Dir)" },
+    { "<c-P>", "<cmd>FzfLua git_files<cr>", desc = "Find Files (git-files)" },
+    { "<leader>b", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
+    { "<leader>gs", false },
   },
 }
