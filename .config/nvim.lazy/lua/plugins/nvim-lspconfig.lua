@@ -59,6 +59,11 @@ return {
       -- LSP Server Settings
       ---@type lspconfig.options
       servers = {
+        tailwindcss = {
+          root_dir = function()
+            return vim.fs.dirname(vim.fs.find(".git", { path = startpath, upward = true })[1])
+          end,
+        },
         lua_ls = {
           -- mason = false, -- set to false if you don't want this server to be installed with mason
           -- Use this to add any additional keymaps

@@ -6,6 +6,7 @@ return {
       "ruff",
       "typescript-language-server",
       "eslint-lsp",
+      "tailwindcss-language-server",
       "stylua",
       "shfmt",
     },
