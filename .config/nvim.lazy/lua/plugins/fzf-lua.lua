@@ -1,6 +1,6 @@
 return {
   "ibhagwan/fzf-lua",
-  dependencies = { "echasnovski/mini.icons" },
+  dependencies = { "nvim-mini/mini.icons" },
   opts = { "telescope" },
   keys = {
     { "<leader>ff", LazyVim.pick("files", { root = false }), desc = "Find Files (Root Dir)" },

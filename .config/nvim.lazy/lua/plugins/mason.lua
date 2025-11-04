@@ -6,9 +6,10 @@ return {
       "ruff",
       "typescript-language-server",
       "eslint-lsp",
-      "tailwindcss-language-server",
+      "prettier",
       "stylua",
       "shfmt",
+      "rust-analyzer",
     },
   },
 }
